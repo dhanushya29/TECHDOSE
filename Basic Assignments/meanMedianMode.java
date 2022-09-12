@@ -16,6 +16,18 @@ public class meanMedianMode {
         mean=sum/n;
         Arrays.sort(arr);
         median=arr[n/2];
-        System.out.print(mean+" "+median);
+        int count=0,max=0;
+        for(int i=0;i<n;i++){
+           for(int j=i+1;j<n;j++){
+            if(arr[i]==arr[j]){
+                count++;
+            }
+           }
+           if(count>max){
+            max=count;
+            mode=arr[i];
+           }
+        }
+        System.out.print("Mean:"+mean+" "+"Median:"+median+" "+"Mode:"+mode);
     }
 }
