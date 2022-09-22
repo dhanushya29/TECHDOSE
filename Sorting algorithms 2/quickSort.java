@@ -1,23 +1,5 @@
 import java.util.*;
 public class quickSort{
-    static void swap(int a,int b){
-        int temp=a;
-        a=b;
-        b=temp;
-    }
-    static void qsort(int []arr,int i,int j,int pivot){
-        while(i<pivot){
-        if(arr[j]<arr[pivot]){
-            i++;
-            swap(arr[i],arr[j]);
-            j++;
-        }else if(arr[j]>arr[pivot]){
-            j++;
-        }else{
-            break;
-        }
-      }
-    }
     static void quickSort(int []arr,int low,int high){
         if(low<high){
             int partite=partition(arr,low,high);
