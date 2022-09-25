@@ -6,9 +6,9 @@ public class quickSelectKthLargest {
         int high=n-1;
         while(low<=high){
             int partite=partition(arr,low,high);
-            if(partite+1==k){
+            if(partite==k){
                 return arr[partite];
-            }else if(partite+1>k){
+            }else if(partite>k){
                 high=partite-1;
             }else{
                 low=partite+1;
@@ -41,7 +41,7 @@ public class quickSelectKthLargest {
             arr[i]=sc.nextInt();
         }
         int k=sc.nextInt();
-        int ans= quickSelect(arr,0,n-k+1,n);
+        int ans= quickSelect(arr,0,n-k,n);
         System.out.println(ans);
     }
 }
