@@ -1,4 +1,4 @@
-package TECHDOSE.Arrays;
+
 import java.util.*;
 public class binarySearchBinarySearch {
     public static void main(String[]args) {

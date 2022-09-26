@@ -1,4 +1,4 @@
-package TECHDOSE.Arrays;
+
 import java.util.*;
 public class quickSelectKthLargest {
     public static int quickSelect(int[]arr,int low,int k,int n){

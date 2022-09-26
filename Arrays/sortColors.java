@@ -1,4 +1,4 @@
-package TECHDOSE.Arrays;
+
 
 public class sortColors {
     public void sortColors(int[] nums) {

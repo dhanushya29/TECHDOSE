@@ -1,4 +1,4 @@
-package TECHDOSE.Arrays;
+
 
 public class mergeWithoutExtraSpace {
         public static void swap(int[]nums,int i,int j){
