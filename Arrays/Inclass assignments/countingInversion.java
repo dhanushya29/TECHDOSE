@@ -16,6 +16,7 @@ public class countingInversion {
             }
         }
     int[]b=new int[high+1];
+        int k;
         while(i<=mid && j<=high){
             if(arr[i]<arr[j]){
                 b[k++]=arr[i++];
@@ -32,6 +33,7 @@ public class countingInversion {
         for(int ind=low;ind<=high;ind++){
             arr[ind]=b[ind];
         }
+        return k;
     }
     public static int merge(int[]arr,int low,int high,int n){
         int mid=low+(high-low)/2;

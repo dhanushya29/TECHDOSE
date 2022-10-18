@@ -3,7 +3,7 @@ import java.util.TreeSet;
 public class weekly_301 {
     // class SmallestInfiniteSet {
         TreeSet <Integer> set;
-        public SmallestInfiniteSet() {
+        public void SmallestInfiniteSet() {
             set=new TreeSet<Integer>();
             for(int i=1;i<=1000;i++)set.add(i);
         }
