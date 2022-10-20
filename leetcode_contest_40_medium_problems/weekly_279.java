@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class weekly_274 {
+public class weekly_279 {
     // class Solution {
         public long smallestNumber(long num) {
             if(num==0)return 0;
