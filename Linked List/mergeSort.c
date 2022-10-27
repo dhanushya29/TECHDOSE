@@ -34,44 +34,33 @@ void display ( struct Node *head ){
 	printf("NULL");
 }
 
-struct Node * merge(struct Node*a,struct Node*b){
-    struct Node *result=NULL;
+struct Node* merge(struct Node *a,struct Node *b){
+    struct Node *res=NULL;
     if(a==NULL)return b;
     if(b==NULL)return a;
-    // while(a!=NULL && b!=NULL){
-        if(a->data <= b->data){
-            result=a;
-            result->next=merge(a->next,b);
-        }else{
-            result=b;
-            result->next=merge(a,b->next);
-        }
-    return result;
-}
-void midNode(struct Node *head,struct Node **a,struct Node **b){
-    if(head==NULL || head->next==NULL){
-        *a=head;
-        *b=NULL;
-        return;
+    if(a->data <= b->data){
+        res=a;
+        res->next=merge(a->next,b);
     }
-    struct Node *slow=head;
-    struct Node *fast=head->next;
-    fast=fast->next;
-    while(fast!=NULL && fast->next!=NULL){
+    else{
+        res=b;
+        res->next=merge(a,b->next);
+    }
+    return res;
+}
+void mergeSort(struct Node **head){
+    struct Node *newStart;
+    struct Node *temp=*head;
+    if(temp==NULL || temp->next==NULL)return;
+    struct Node *slow=temp,*fast=temp;
+    while(fast->next!=NULL && fast->next->next!=NULL){
         slow=slow->next;
         fast=fast->next->next;
     }
-    *a = head;
-    *b = slow->next;
+    newStart=slow->next;
     slow->next=NULL;
-}
-void mergeSort(struct Node ** head){
-    if(*head==NULL || *(head)->next ==NULL)return;
-    struct Node *a;
-    struct Node *b;
-    midNode(*head,&a,&b);
-    mergeSort(&a);mergeSort(&b);
-    *head=merge(a,b);
+    mergeSort(&temp);mergeSort(&newStart);
+    *head=merge(temp,newStart);
 }
 int main() {
 /* insert your code here */
@@ -93,5 +82,3 @@ int main() {
     display(head);
 	return 0;
 }
-
-
