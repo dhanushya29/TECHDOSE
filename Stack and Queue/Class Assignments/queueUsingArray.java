@@ -12,7 +12,7 @@ public class queueUsingArray {
         return size==0;
     }
     public static void enqueue(int ele){
-        if(!isFull()){
+        if(!isFull()){ 
             queue[++rear]=ele;
             size++;
         }else{
