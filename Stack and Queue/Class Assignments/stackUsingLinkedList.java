@@ -7,7 +7,7 @@ public class stackUsingLinkedList {
     }
     public static void push(int x){
         Node nn=new Node(x);
-        // if(isEmpty())top= nn;
+        // if(isEmpty()))top= nn;
         nn.next=top;
         top=nn;
     } 
