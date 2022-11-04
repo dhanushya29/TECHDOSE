@@ -7,11 +7,11 @@ public class nextSmallerElement {
         int []res=new int[4];
         int ind=0;
         for(int i=3;i>=0;i--){
-            while(!stk.isEmpty() && stk.peek()<=arr[i]){
+            while(!stk.isEmpty() && stk.peek()>=arr[i]){
                 // res[ind++]=arr[i];
                 stk.pop();
             }
-            res[i]=stk.isEmpty()?-1:arr[i];
+            res[i]=stk.isEmpty()?-1:stk.peek();
             stk.push(arr[i]);
         }
         System.out.println(Arrays.toString(res));

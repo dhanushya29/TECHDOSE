@@ -7,7 +7,7 @@ public class previousGreater {
         int[]res=new int[5];
         Stack<Integer> stk=new Stack<>();
         for(int i=0;i<5;i++){
-            while(!stk.isEmpty() && stk.peek()<arr[i]){
+            while(!stk.isEmpty() && stk.peek()<=arr[i]){
                 stk.pop();
             }
             res[i]=stk.isEmpty()?-1:stk.peek();
