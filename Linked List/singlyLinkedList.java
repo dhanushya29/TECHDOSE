@@ -49,23 +49,39 @@ public class singlyLinkedList {
         public static int deleteAt(int pos){
             Node temp=ll;
             int del=0;
+            if(ll==null)return -1;
+            if(pos==1){
+                return poll();
+            }
             while(--pos>1){
                 temp=temp.next;
             }
-            System.out.println(temp.data);
             del=temp.next.data;
+            System.out.println(del);
             temp.next=temp.next.next;    
             return del;
         }  
         public static int poll(){
+            if(ll==null){
+                return -1;
+            }
             int res=ll.data;
             ll=ll.next;
             return res;
         }  
         public static int pop(){
             Node nn=ll;
+            if(ll==null){
+                return -1;
+            }
+            int res=0;
+            if(nn.next==null){
+                res=nn.data;
+                ll=null;
+                return res;
+            }
             while(nn.next.next!=null)nn=nn.next;
-            int res=nn.next.data;
+            res=nn.next.data;
             nn.next=null;
             return res;
         } 
