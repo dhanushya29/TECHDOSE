@@ -1,4 +1,4 @@
-package TECHDOSE.Heap.Leetcode;
+package Heap.Leetcode;
 
 import java.util.PriorityQueue;
 

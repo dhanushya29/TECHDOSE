@@ -1,4 +1,4 @@
-package TECHDOSE.Heap.Implementation;
+package Heap.Implementation;
 
 import java.util.Arrays;
 
