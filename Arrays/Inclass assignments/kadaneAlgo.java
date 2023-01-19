@@ -9,7 +9,7 @@ public class kadaneAlgo {
         }
         int meh=0,msf=Integer.MIN_VALUE,left=0,right=0;
         for(int i=0;i<n;i++){
-            meh+=arr[i];
+             meh+=arr[i];
             if(meh<arr[i]){
                 left=i;
                 meh=arr[i];
